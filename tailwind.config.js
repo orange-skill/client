@@ -1,7 +1,7 @@
 module.exports = {
   prefix: "",
   purge: {
-    enabled: true,
+    // enabled: true,
     content: ["./src/**/*.{html,ts}"],
   },
   darkMode: "class", // or 'media' or 'class'
@@ -35,10 +35,14 @@ module.exports = {
           warning: "#FFBB54",
           info: "#58CDFF",
         },
+        indigo: {
+          500: "#AB54DB",
+        },
       },
     },
   },
   variants: {
     extend: {},
   },
+  plugins: [require("@tailwindcss/forms")],
 };

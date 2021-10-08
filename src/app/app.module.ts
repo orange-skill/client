@@ -10,6 +10,7 @@ import { SidebarItemComponent } from './components/sidebar/sidebar-item/sidebar-
 import { SidebarComponent } from './components/sidebar/sidebar/sidebar.component';
 import { SkillsListComponent } from './components/skills/skills-list/skills-list.component';
 import { SkillsAddComponent } from './components/skills/skills-add/skills-add.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SkillsAddComponent } from './components/skills/skills-add/skills-add.co
     SidebarItemComponent,
     SidebarComponent,
     SkillsListComponent,
-    SkillsAddComponent
+    SkillsAddComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
