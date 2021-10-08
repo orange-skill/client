@@ -1,22 +1,22 @@
-<div class="flex flex-row w-screen h-screen bg-grey-200">
-    <div class="h-full p-4">
-        <app-sidebar class="h-full"></app-sidebar>
+<div class="flex flex-row w-screen h-screen bg-grey-200 overflow-auto">
+    <div class="sticky top-0 h-full p-4">
+        <app-sidebar class="h-auto"></app-sidebar>
     </div>
 
-    <div class="bg-grey-200 w-5/6 m-6">
+    <div class="p-4 bg-grey-200 w-5/6 m-6 h-full">
         <app-header title="Add Skill"></app-header>
         <main class="flex w-full">
             <div class="mx-auto px-4 sm:px-6 md:px-8">
                 <div class="w-full h-full">
                     <form action="" class="flex flex-col justify-center items-center">
                         <div class="mt-8">
-                            <label for="skillId" class=" font-semibold text-xl text-gray-700">Skill ID</label>
+                            <label for="skillId" class="font-semibold text-xl text-gray-700">Skill ID</label>
                             <div class="mt-2 h-16 w-96">
                                 <input type="text" name="skillId" id="skillId" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4" placeholder="1234">
                             </div>
                         </div>
                         <div class="mt-8">
-                            <label for="track" class=" font-semibold text-xl text-gray-700">Track</label>
+                            <label for="track" class="font-semibold text-xl text-gray-700">Track</label>
                             <div class="mt-2 h-16 w-96">
                                 <select type="text" name="track" id="track" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4">
                                     <option>Learning</option>
@@ -25,18 +25,69 @@
                             </div>
                         </div>
                         <div class="mt-8">
-                            <label for="trackDetails" class=" font-semibold text-xl text-gray-700">Track Details</label>
+                            <label for="trackDetails" class="font-semibold text-xl text-gray-700">Track Details</label>
                             <div class="mt-2 h-16 w-96">
                                 <input type="text" name="trackDetails" id="trackDetails" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4" placeholder="Ex: Architecting with Google Cloud Platform">
                             </div>
                         </div>
                         <div class="mt-8">
-                            <label for="profiency" class=" font-semibold text-xl text-gray-700">Proficiency</label>
+                            <label for="profiency" class="font-semibold text-xl text-gray-700">Proficiency</label>
                             <div class="mt-2 h-16 w-96">
                                 <input name="profiency" id="profiency" class="rounded-lg overflow-hidden appearance-none bg-white h-1/2 w-full" type="range" min="1" max="5" step="1" value="3" />
                             </div>
                         </div>
-
+                        <div>
+                            <span class="font-semibold text-2xl">Skill Classification</span>
+                        </div>
+                        <div class="mt-8">
+                            <label for="levelOne" class="font-semibold text-xl text-gray-700">Level One</label>
+                            <div class="mt-2 h-16 w-96">
+                                <select type="text" name="levelOne" id="levelOne" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4">
+                                    <option>Learning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <label for="levelTwo" class="font-semibold text-xl text-gray-700">Level Two</label>
+                            <div class="mt-2 h-16 w-96">
+                                <select type="text" name="levelTwo" id="levelTwo" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4">
+                                    <option>Learning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <label for="levelThree" class="font-semibold text-xl text-gray-700">Level Three</label>
+                            <div class="mt-2 h-16 w-96">
+                                <select type="text" name="levelThree" id="levelThree" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4">
+                                    <option>Learning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <label for="levelFour" class="font-semibold text-xl text-gray-700">Level Four</label>
+                            <div class="mt-2 h-16 w-96">
+                                <select type="text" name="levelFour" id="levelFour" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4">
+                                    <option>Learning</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <label for="managerEmail" class="font-semibold text-xl text-gray-700">Manager Email</label>
+                            <div class="mt-2 h-16 w-96">
+                                <input type="text" name="managerEmail" id="managerEmail" class="h-full w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-2xl p-4" placeholder="manager@example.com">
+                            </div>
+                        </div>
+                        <div class="mt-8 flex flex-row justify-around items-start w-full">
+                            <label for="public_" class="font-semibold text-xl text-gray-700">Skill Visibility Public?</label>
+                            <div class="">
+                                <input name="public_" id="public_" aria-describedby="comments-description" name="comments" type="checkbox" class="focus:ring-indigo-500 h-8 w-8 text-theme-success border-gray-300 rounded">
+                            </div>
+                        </div>
+                        <div class="m-8">
+                            <button routerLink="add" class="flex flex-row justify-center items-center h-16 w-72 rounded-3xl text-white font-bold bg-theme-primary">
+                                <span>Create Skill</span>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
