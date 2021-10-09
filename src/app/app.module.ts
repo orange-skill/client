@@ -19,6 +19,8 @@ import { SearchComponent } from './components/search/search.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NotificationItemComponent } from './components/notification/notification-item/notification-item.component';
+import { NotificationBarComponent } from './components/notification/notification-bar/notification-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsAddComponent,
     HeaderComponent,
     SearchComponent,
+    NotificationItemComponent,
+    NotificationBarComponent,
   ],
   imports: [
     BrowserModule,

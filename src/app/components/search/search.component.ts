@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
 
   async search() {
     console.log(this.searchField);
-    const x = await this.api.post('search', {
+    const x = await this.api.post('employee/searchSkill', {
       query: this.searchField,
       loc: 'blore',
     });
