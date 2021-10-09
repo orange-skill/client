@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotificationItemComponent } from './components/notification/notification-item/notification-item.component';
 import { NotificationBarComponent } from './components/notification/notification-bar/notification-bar.component';
+import { AnalyticsComponent } from './components/analytics/analytics/analytics.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { NotificationBarComponent } from './components/notification/notification
     SearchComponent,
     NotificationItemComponent,
     NotificationBarComponent,
+    AnalyticsComponent,
   ],
   imports: [
     BrowserModule,

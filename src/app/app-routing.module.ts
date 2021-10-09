@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnalyticsComponent } from './components/analytics/analytics/analytics.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'skills', component: SkillsListComponent },
   { path: 'skills/add', component: SkillsAddComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'analytics', component: AnalyticsComponent },
 ];
 
 @NgModule({
