@@ -12,6 +12,10 @@ import { SkillsListComponent } from './components/skills/skills-list/skills-list
 import { SkillsAddComponent } from './components/skills/skills-add/skills-add.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { MsalModule } from '@azure/msal-angular';
+import { PublicClientApplication } from '@azure/msal-browser';
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +26,27 @@ import { HeaderComponent } from './components/header/header.component';
     SidebarComponent,
     SkillsListComponent,
     SkillsAddComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MsalModule.forRoot(
+      new PublicClientApplication({
+        auth: {
+          clientId: environment.clientId,
+          authority: environment.tenantId,
+          redirectUri: environment.redirectUri,
+        },
+        cache: {
+          cacheLocation: 'localStorage',
+        },
+      }),
+      null as any,
+      null as any
+    ),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
