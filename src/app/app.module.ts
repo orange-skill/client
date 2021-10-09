@@ -15,7 +15,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { MsalModule } from '@azure/msal-angular';
 import { PublicClientApplication } from '@azure/msal-browser';
 import { environment } from 'src/environments/environment';
+import { SearchComponent } from './components/search/search.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,7 @@ import { environment } from 'src/environments/environment';
     SkillsListComponent,
     SkillsAddComponent,
     HeaderComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,8 @@ import { environment } from 'src/environments/environment';
       null as any,
       null as any
     ),
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
