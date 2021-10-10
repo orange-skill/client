@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotificationItemComponent } from './components/notification/notification-item/notification-item.component';
 import { NotificationBarComponent } from './components/notification/notification-bar/notification-bar.component';
 import { AnalyticsComponent } from './components/analytics/analytics/analytics.component';
+import { AnalyticsItemComponent } from './components/analytics/analytics-item/analytics-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { AnalyticsComponent } from './components/analytics/analytics/analytics.c
     NotificationItemComponent,
     NotificationBarComponent,
     AnalyticsComponent,
+    AnalyticsItemComponent,
   ],
   imports: [
     BrowserModule,
