@@ -3,19 +3,39 @@
         <app-sidebar class="h-auto"></app-sidebar>
     </div>
 
-    <div class="flex flex-row bg-grey-200 w-5/6 p-6 h-full">
+    <div class="flex flex-row bg-grey-200 w-5/6 p-6 h-full ">
         <div class="w-3/4 h-full">
             <app-header title="Analytics"></app-header>
-            <main class="flex w-full">
-                <div class="mx-auto px-4 sm:px-6 md:px-8">
-                    <div class="w-full h-full">
-
+            <main class="flex w-full flex-col">
+                <div class="mt-8 mx-auto">
+                    <span class="text-2xl font-semibold">Top skills of this week</span>
+                    <div class="flex flex-row flex-wrap w-full h-full gap-8 p-6 bg-grey-200 rounded-3xl">
+                        <app-analytics-item logo='blockchain' name='Blockchain' searchNo=100 percent="12.4" sign="+" graph="graph1"></app-analytics-item>
+                        <app-analytics-item logo='android' name='Android' searchNo=79 percent="0.2" sign="-" graph="graph2"></app-analytics-item>
+                        <app-analytics-item logo='cloud' name='Cloud' searchNo=80 percent="2.4" sign="+" graph="graph3"></app-analytics-item>
+                    </div>
+                </div>
+                <div class="flex w-full h-full">
+                    <div class="my-8 mx-auto">
+                        <span class="text-2xl font-semibold">Explore what skills are being searched</span>
+                        <form #ngForm class="flex flex-col justify-center items-center">
+                            <div class="mt-8 relative rounded-md h-14 w-96">
+                                <input [(ngModel)]="searchField" (keyup.enter)="search()" type="text" name="searchField" id="searchField" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 border-gray-300 rounded-2xl p-4 bg-grey-3" placeholder="Search Skill Analytics">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </main>
+
         </div>
         <div class="w-1/4 h-full">
             <app-notification-bar></app-notification-bar>
         </div>
     </div>
+
 </div>

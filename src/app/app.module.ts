@@ -23,6 +23,9 @@ import { NotificationItemComponent } from './components/notification/notificatio
 import { NotificationBarComponent } from './components/notification/notification-bar/notification-bar.component';
 import { AnalyticsComponent } from './components/analytics/analytics/analytics.component';
 import { AnalyticsItemComponent } from './components/analytics/analytics-item/analytics-item.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +62,8 @@ import { AnalyticsItemComponent } from './components/analytics/analytics-item/an
     ),
     FormsModule,
     HttpClientModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
