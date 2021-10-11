@@ -26,6 +26,9 @@ import { AnalyticsItemComponent } from './components/analytics/analytics-item/an
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
+import { AdminApproveItemComponent } from './components/admin/admin-approve-item/admin-approve-item.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { SignupComponent } from './components/auth/signup/signup.component';
     AnalyticsComponent,
     AnalyticsItemComponent,
     SignupComponent,
+    AdminComponent,
+    AdminApproveComponent,
+    AdminApproveItemComponent,
   ],
   imports: [
     BrowserModule,

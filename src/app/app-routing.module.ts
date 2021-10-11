@@ -8,6 +8,8 @@ import { SearchComponent } from './components/search/search.component';
 import { SkillsAddComponent } from './components/skills/skills-add/skills-add.component';
 import { SkillsListComponent } from './components/skills/skills-list/skills-list.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'skills/add', component: SkillsAddComponent },
   { path: 'search', component: SearchComponent },
   { path: 'analytics', component: AnalyticsComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'admin/approve', component: AdminApproveComponent },
 ];
 
 @NgModule({

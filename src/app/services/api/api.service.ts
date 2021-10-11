@@ -13,4 +13,8 @@ export class ApiService {
       .post(environment.API_SERVER + endPoint, body)
       .toPromise();
   }
+
+  async get(endPoint: string) {
+    return await this.http.get(environment.API_SERVER + endPoint).toPromise();
+  }
 }
