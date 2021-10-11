@@ -26,6 +26,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
+      
+      - name: setup env
+        run: npm run config:prod
+        env:
+          clientId: ${{ secrets.clientId }}
+          tenantId: ${{ secrets.tenantId }}
+          redirectUri: ${{ secrets.redirectUri }}
+          API_SERVER: ${{ secrets.API_SERVER }}
+        
 
       - name: npm install, and build
         run: |
