@@ -10,6 +10,21 @@ import { SidebarItemComponent } from './components/sidebar/sidebar-item/sidebar-
 import { SidebarComponent } from './components/sidebar/sidebar/sidebar.component';
 import { SkillsListComponent } from './components/skills/skills-list/skills-list.component';
 import { SkillsAddComponent } from './components/skills/skills-add/skills-add.component';
+import { HeaderComponent } from './components/header/header.component';
+
+import { MsalModule } from '@azure/msal-angular';
+import { PublicClientApplication } from '@azure/msal-browser';
+import { environment } from 'src/environments/environment';
+import { SearchComponent } from './components/search/search.component';
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NotificationItemComponent } from './components/notification/notification-item/notification-item.component';
+import { NotificationBarComponent } from './components/notification/notification-bar/notification-bar.component';
+import { AnalyticsComponent } from './components/analytics/analytics/analytics.component';
+import { AnalyticsItemComponent } from './components/analytics/analytics-item/analytics-item.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,13 +35,37 @@ import { SkillsAddComponent } from './components/skills/skills-add/skills-add.co
     SidebarItemComponent,
     SidebarComponent,
     SkillsListComponent,
-    SkillsAddComponent
+    SkillsAddComponent,
+    HeaderComponent,
+    SearchComponent,
+    NotificationItemComponent,
+    NotificationBarComponent,
+    AnalyticsComponent,
+    AnalyticsItemComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MsalModule.forRoot(
+      new PublicClientApplication({
+        auth: {
+          clientId: environment.clientId,
+          authority: environment.tenantId,
+          redirectUri: environment.redirectUri,
+        },
+        cache: {
+          cacheLocation: 'localStorage',
+        },
+      }),
+      null as any,
+      null as any
+    ),
+    FormsModule,
+    HttpClientModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

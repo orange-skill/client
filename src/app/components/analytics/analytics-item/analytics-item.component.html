@@ -1,0 +1,20 @@
+<!-- <div class="w-full bg-white h-full p-8 rounded-3xl">
+    <span class="inline-flex items-center px-3 py-0.5 rounded-full font-bold text-sm bg-blue-100 text-blue-800">Android</span>
+    <ngx-charts-line-chart class="font-normal relative inset-y-8" [curve]="curve" [view]="view" [scheme]="colorScheme" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="multi">
+    </ngx-charts-line-chart>
+</div> -->
+<div class="flex flex-col w-auto bg-white rounded-3xl p-8 text-grey-body">
+    <div class="flex flex-row text-3xl font-semibold gap-4 justify-around items-center pb-4">
+        <div class="h-10 w-10">
+            <img [src]="logoFile" alt="" class="h-full w-full">
+        </div>
+        <span>{{name}}</span>
+    </div>
+    <div class="flex flex-row text-lg py-2 justify-between font-medium">
+        <span>{{searchNo}} searches</span>
+        <span [ngClass]="signClass">{{sign}} {{percent}} %</span>
+    </div>
+    <div class="pt-4">
+        <img [src]="graphFile" alt="">
+    </div>
+</div>
