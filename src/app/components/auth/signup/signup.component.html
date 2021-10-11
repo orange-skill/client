@@ -7,7 +7,7 @@
         <form [formGroup]="empSignUpForm" (ngSubmit)="onSubmit()" class="flex flex-col m-4">
             <div class="flex flex-col m-2">
                 <label for="email" class="text-lg font-bold">Employee ID</label>
-                <input formControlName="empId" type="text" name="" id="" class="w-96 h-12 rounded-lg p-4 font-bold" placeholder="1234">
+                <input formControlName="empId" type="number" name="" id="" class="w-96 h-12 rounded-lg p-4 font-bold" placeholder="1234">
             </div>
             <div class="flex flex-col m-2">
                 <label for="password" class="text-lg font-bold">Name</label>

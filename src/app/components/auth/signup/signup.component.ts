@@ -31,11 +31,8 @@ export class SignupComponent implements OnInit {
   }
 
   async onSubmit() {
-    // TODO: Use EventEmitter with form value
-    // console.warn(this.empSignUpForm.value as empSignUpForm);
-    const result = await this.auth.signUp(
-      this.empSignUpForm.value as empSignUpForm
-    );
+    const data: empSignUpForm = this.empSignUpForm.value;
+    const result = await this.auth.signUp(data);
     console.log(result);
   }
 }

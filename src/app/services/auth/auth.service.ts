@@ -41,4 +41,6 @@ export class AuthService {
   public async signUp(data: empSignUpForm) {
     return await this.api.post('employee/add', data);
   }
+
+  public async getMongoProfile(email: string) {}
 }
