@@ -12,7 +12,7 @@ import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
   { path: 'auth/login', component: LoginComponent },
   { path: 'auth/signup', component: SignupComponent },
