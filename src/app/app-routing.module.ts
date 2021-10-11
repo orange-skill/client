@@ -10,6 +10,7 @@ import { SkillsListComponent } from './components/skills/skills-list/skills-list
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
+import { ProfileComponent } from './components/profile/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'admin/approve', component: AdminApproveComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({

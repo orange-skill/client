@@ -29,6 +29,7 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
 import { AdminApproveItemComponent } from './components/admin/admin-approve-item/admin-approve-item.component';
+import { ProfileComponent } from './components/profile/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AdminApproveItemComponent } from './components/admin/admin-approve-item
     AdminComponent,
     AdminApproveComponent,
     AdminApproveItemComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
