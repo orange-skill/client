@@ -1,3 +1,4 @@
+import { HttpRequest } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
 
@@ -8,16 +9,19 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class SearchComponent implements OnInit {
   searchField: string = '';
+  employeeData: Array<any> = [];
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {}
 
   async search() {
     console.log(this.searchField);
-    const x = await this.api.post('employee/searchSkill', {
+    const result: any = await this.api.post('employee/searchSkill', {
       query: this.searchField,
       loc: 'blore',
     });
-    console.log(x);
+    this.employeeData = result['searchResult'];
+    console.log(result);
+    console.log(this.employeeData);
   }
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MsalService } from '@azure/msal-angular';
+import { ApiService } from '../api/api.service';
+import { empSignUpForm } from '../../models/user.signup';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +9,7 @@ import { MsalService } from '@azure/msal-angular';
 export class AuthService {
   loginDisplay = false;
 
-  constructor(private authService: MsalService) {}
+  constructor(private authService: MsalService, private api: ApiService) {}
 
   public login() {
     this.authService.loginPopup().subscribe({
@@ -35,4 +37,10 @@ export class AuthService {
       return false;
     }
   }
+
+  public async signUp(data: empSignUpForm) {
+    return await this.api.post('employee/add', data);
+  }
+
+  public async getMongoProfile(email: string) {}
 }

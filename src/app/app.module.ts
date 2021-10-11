@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/auth/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SidebarItemComponent } from './components/sidebar/sidebar-item/sidebar-item.component';
 import { SidebarComponent } from './components/sidebar/sidebar/sidebar.component';
@@ -17,7 +17,7 @@ import { PublicClientApplication } from '@azure/msal-browser';
 import { environment } from 'src/environments/environment';
 import { SearchComponent } from './components/search/search.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotificationItemComponent } from './components/notification/notification-item/notification-item.component';
 import { NotificationBarComponent } from './components/notification/notification-bar/notification-bar.component';
@@ -25,6 +25,11 @@ import { AnalyticsComponent } from './components/analytics/analytics/analytics.c
 import { AnalyticsItemComponent } from './components/analytics/analytics-item/analytics-item.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { AdminComponent } from './components/admin/admin/admin.component';
+import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
+import { AdminApproveItemComponent } from './components/admin/admin-approve-item/admin-approve-item.component';
+import { ProfileComponent } from './components/profile/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +47,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotificationBarComponent,
     AnalyticsComponent,
     AnalyticsItemComponent,
+    SignupComponent,
+    AdminComponent,
+    AdminApproveComponent,
+    AdminApproveItemComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +74,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     NgxChartsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

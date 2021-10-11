@@ -1,7 +1,7 @@
 module.exports = {
   prefix: "",
   purge: {
-    // enabled: true,
+    enabled: true,
     content: ["./src/**/*.{html,ts}"],
   },
   darkMode: "class", // or 'media' or 'class'
@@ -43,7 +43,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ["disabled"],
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };
