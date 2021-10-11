@@ -1,0 +1,31 @@
+<div class="flex flex-row w-screen h-screen">
+    <div class="w-1/2 bg-login-illustration bg-cover"></div>
+    <div class="flex flex-col w-1/2 bg-grey-200 justify-center items-center text-custom-200">
+        <div class="flex flex-col font-extrabold text-left">
+            <span class="text-4xl m-2">Sign Up</span>
+        </div>
+        <form [formGroup]="empSignUpForm" (ngSubmit)="onSubmit()" class="flex flex-col m-4">
+            <div class="flex flex-col m-2">
+                <label for="email" class="text-lg font-bold">Employee ID</label>
+                <input formControlName="empId" type="text" name="" id="" class="w-96 h-12 rounded-lg p-4 font-bold" placeholder="1234">
+            </div>
+            <div class="flex flex-col m-2">
+                <label for="password" class="text-lg font-bold">Name</label>
+                <input formControlName="name" type="text" name="" id="" class="w-96 h-12 rounded-lg p-4 font-bold" placeholder="John Doe">
+            </div>
+            <div class="flex flex-col m-2">
+                <label for="email" class="text-lg font-bold">Email</label>
+                <input formControlName="email" type="text" name="" id="" class="w-96 h-12 rounded-lg p-4 font-bold" placeholder="you@example.com">
+            </div>
+            <div class="flex flex-col m-2">
+                <label for="password" class="text-lg font-bold">Location</label>
+                <input formControlName="location" type="text" name="" id="" class="w-96 h-12 rounded-lg p-2 font-bold" placeholder="Bangalore">
+            </div>
+            <div class="m-2 mt-4">
+                <button type="submit" [disabled]="!empSignUpForm.valid" class="flex flex-row bg-theme-primary w-96 h-12 rounded-lg p-4 font-bold justify-center items-center disabled:opacity-50">
+                    <span class="text-white">Sign Up</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
