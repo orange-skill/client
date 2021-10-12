@@ -12,6 +12,7 @@ import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
 import { VerifyComponent } from './components/auth/verify/verify.component';
+import { ApproveComponent } from './components/approve/approve/approve.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'verify', component: VerifyComponent },
+  { path: 'approve', component: ApproveComponent },
 ];
 
 @NgModule({

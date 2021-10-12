@@ -8,6 +8,8 @@ import { empSignUpForm } from '../../models/user.signup';
 })
 export class AuthService {
   loginDisplay = false;
+  public empId = 12351;
+  public managerId = 12348;
 
   constructor(private authService: MsalService, private api: ApiService) {}
 
