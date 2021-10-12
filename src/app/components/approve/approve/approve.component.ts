@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 export class ApproveComponent implements OnInit {
   data: any;
   managerId = 12348;
-  comment = true;
+  comment = false;
 
   addComment = new FormGroup({
     message: new FormControl(''),
@@ -48,8 +48,11 @@ export class ApproveComponent implements OnInit {
     const res = await this.api.post('employee/skill/confirm', {
       skillIdx: idx,
       // empId: this.auth.empId,
-      empId: 12350,
+      empId: this.auth.empId,
     });
     console.log(res);
+  }
+  commentA() {
+    this.comment = true;
   }
 }
