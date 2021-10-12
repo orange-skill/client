@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'admin/approve', component: AdminApproveComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:id', component: ProfileComponent },
 ];
 
 @NgModule({
