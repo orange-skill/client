@@ -11,15 +11,19 @@ export class AuthService {
 
   constructor(private authService: MsalService, private api: ApiService) {}
 
-  public login() {
-    this.authService.loginPopup().subscribe({
-      next: (result) => {
-        console.log(result.account);
-        this.authService.instance.setActiveAccount(result.account);
-        this.setLoginDisplay();
-      },
-      error: (error) => console.log(error),
-    });
+  public async login() {
+    const result = await this.authService.loginPopup().toPromise();
+    this.authService.instance.setActiveAccount(result.account);
+    this.setLoginDisplay();
+    return result;
+    // .subscribe({
+    //   next: (result) => {
+    //     console.log(result.account);
+    //     this.authService.instance.setActiveAccount(result.account);
+    //     this.setLoginDisplay();
+    //   },
+    //   error: (error) => console.log(error),
+    // });
   }
 
   private setLoginDisplay() {
