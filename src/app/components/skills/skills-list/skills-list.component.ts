@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-skills-list',
@@ -7,13 +8,14 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./skills-list.component.css'],
 })
 export class SkillsListComponent implements OnInit {
-  empId: number = 123450;
   skillData: Array<any> = [];
-  constructor(private api: ApiService) {}
+  empId = 0;
+  constructor(private api: ApiService, private auth: AuthService) {}
 
   async ngOnInit() {
+    this.empId = this.auth.empId;
     const results: any = await this.api.post('employee/skills', {
-      empId: 12350,
+      empId: this.empId,
     });
     this.skillData = results['skills'];
     console.log(results);

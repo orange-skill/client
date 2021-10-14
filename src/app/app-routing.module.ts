@@ -11,12 +11,14 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
+import { VerifyComponent } from './components/auth/verify/verify.component';
+import { ApproveComponent } from './components/approve/approve/approve.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'home', component: HomeComponent },
   { path: 'auth/login', component: LoginComponent },
-  { path: 'auth/signup', component: SignupComponent },
+  { path: 'auth/signup/:name/:email', component: SignupComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'skills', component: SkillsListComponent },
   { path: 'skills/add', component: SkillsAddComponent },
@@ -25,6 +27,9 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'admin/approve', component: AdminApproveComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:id', component: ProfileComponent },
+  { path: 'verify', component: VerifyComponent },
+  { path: 'approve', component: ApproveComponent },
 ];
 
 @NgModule({

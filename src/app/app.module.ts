@@ -30,6 +30,8 @@ import { AdminComponent } from './components/admin/admin/admin.component';
 import { AdminApproveComponent } from './components/admin/admin-approve/admin-approve.component';
 import { AdminApproveItemComponent } from './components/admin/admin-approve-item/admin-approve-item.component';
 import { ProfileComponent } from './components/profile/profile/profile.component';
+import { VerifyComponent } from './components/auth/verify/verify.component';
+import { ApproveComponent } from './components/approve/approve/approve.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { ProfileComponent } from './components/profile/profile/profile.component
     AdminApproveComponent,
     AdminApproveItemComponent,
     ProfileComponent,
+    VerifyComponent,
+    ApproveComponent,
   ],
   imports: [
     BrowserModule,
